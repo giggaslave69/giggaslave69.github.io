@@ -1,0 +1,8 @@
+FROM postgres
+
+ENV POSTGRES_PASSWORD password
+
+#If mounts unavailable use tar backup
+#COPY postgres_db_data.tar.gz /var/lib/postgresql/data
+#RUN rm -rf /var/lib/postgresql/data/pgdata
+#RUN cd /var/lib/postgresql/data;tar -xzvf postgres_db_data.tar.gz
